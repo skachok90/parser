@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+form {
+	display: block;	
+	width: 250px;
+	margin: 0 auto;	
+}
+label:hover, input[type="submit"]:hover {
+	cursor: pointer;	
+}

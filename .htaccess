@@ -1,0 +1,18 @@
+#Options +FollowSymlinks
+#Options -Indexes
+
+AddDefaultCharset UTF-8
+AddType application/java-archive jar
+
+RewriteEngine on
+RewriteRule !\.(js|ico|gif|jpg|png|css|pdf|mov|mp3)$ index.php
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php [L]
+<IfModule mod_php5.c>
+php_value max_execution_time 259200
+</IfModule>
+
+
